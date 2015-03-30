@@ -1,0 +1,213 @@
+// home page
+
+#hp-news {
+  cursor: pointer;
+}
+
+.hp-news{
+  height: em(550);
+}
+
+.wp-hp-news{
+  position: relative;
+  height: 100%;
+  @include transition ( all 1s ease-in-out );
+}
+
+#wp-hp-news__txt-content{
+  height: 100%;
+}
+
+.wp-hp-news__content-wrapper{
+  display: table;
+  padding-top: 10%;
+  padding-left:10%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+  // cursor:pointer;
+}
+
+.wp-hp-news__content-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.4;
+  @include transition (background 0.4s $ease-in-out-quad);
+  background: rgba(0, 0, 0, 0);
+}
+
+.wp-hp-news__content-wrapper:hover::before {
+  @include transition (background 0.4s $ease-in-out-quad);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wp-hp-news__section-name{
+  padding-left:-10%;
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  // line-height: 1em;
+  font-size:em(32);
+  color: #fff;
+}
+
+.wp-hp-news__what {
+  margin-top: em(170);
+  font-family: $font-roboto-condensed;
+  font-weight: 100;
+  font-style: italic;
+  // letter-spacing: 2px;
+  font-size:em(24);
+  color: #f14d21;
+}
+
+.wp-hp-news__title{
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  line-height: 1em;
+  font-size:em(44);
+  color: #fff;
+  margin-top: em(3);
+}
+
+.wp-hp-news__desc {
+  font-family: $font-roboto;
+  font-weight: 100;
+  color:#fff;
+}
+
+/*  */
+#hp-badge {
+  cursor: pointer;
+}
+
+.wp-hp-badge{
+  position: relative;
+  height: 100%;
+  background: url('../../img/home/ted-cover.jpg') center center/cover no-repeat;
+  @include transition ( all 1s ease-in-out );
+}
+
+.wp-hp-badge__content-wrapper{
+  display: table;
+  width:100%;
+  padding-top: 70%;
+  padding-left:10%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+}
+
+.wp-hp-badge__content-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  @include transition (background 0.4s $ease-in-out-quad);
+  background: rgba(0, 0, 0, 0);
+}
+
+.wp-hp-badge__content-wrapper:hover::before {
+  @include transition (background 0.4s $ease-in-out-quad);
+  background: rgba(0, 0, 0, 0.39);
+}
+
+.wp-hp-badge__what {
+  font-family: $font-roboto-condensed;
+  font-weight: 100;
+  font-style: italic;
+  // letter-spacing: 2px;
+  font-size:em(24);
+  color: #f14d21;
+}
+
+.wp-hp-badge__title a{
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  line-height: 1em;
+  // letter-spacing: 2px;
+  font-size:em(44);
+  color: #fff;
+  margin-top: em(3);
+}
+
+
+/* quotes */
+q {
+  quotes: '“' '”' '‘' '’';
+} /* opening followed by closing quote pairs */
+/* The equivalent using Unicode escapes:
+  q {quotes: '\201C' '\201D' '\2018' '\2019';} */
+q:before {
+  content: open-quote;
+  //font-size: em(25);
+  }
+q:after {
+  content: close-quote;
+  // font-size: em(25);
+  }
+
+.quote-wrapper {
+  margin: 4em 0 3.5em;
+  text-align: center;
+}
+.quote {
+  font-family: $font-roboto;
+  font-weight: 300;
+  font-size: rem(35);
+}
+
+.quote-below-txt {
+  padding-top:1em;
+  font-family: $font-roboto;
+  font-weight:100;
+  font-size: rem(18);
+  font-variant: 300italic;
+  color: #999;
+}
+
+/* dash */
+.dash {
+  width: 4em;
+  border-top: 2px solid #f14d21;
+  display: block;
+}
+
+.dash-container {
+  display: 100%
+}
+
+.dash-center {
+  margin: 35px auto 35px;
+  text-align: center
+}
+
+.dash-left {
+  text-align: left;
+  margin: 0 0 40px
+}
+
+.dash-center--intro {
+  margin: 10% auto;
+  text-align: center;
+  border-top: 2px solid #ccc
+}

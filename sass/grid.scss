@@ -1,0 +1,189 @@
+/**
+* Grid
+*/
+/*
+sm: 'screen and (min-width: 35.5em)', // 568px
+md: 'screen and (min-width: 48em)',   // 768px
+lg: 'screen and (min-width: 64em)',   // 1024px
+xl: 'screen and (min-width: 80em)'    // 1280px
+*/
+
+/**
+ * Grid wrapper
+ */
+.grid{
+    margin-left:-$base-line-height;
+    list-style:none;
+    margin-bottom:0;
+}
+
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid{
+    margin-left:0;
+}
+
+
+/**
+ * Grid
+ */
+.grid__col {
+    // display:inline-block;
+    // width:100%;
+    // padding-left:$base-line-height;
+    // vertical-align:top;
+    // @if $global-border-box == false{
+    //     @include vendor(box-sizing, border-box);
+    // }
+
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    //
+    border: 1px #ccc solid;
+}
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+
+@mixin grid-setup($namespace: "") {
+    /**
+    * Whole
+    */
+    .#{$namespace}one-whole         { width:100%; }
+
+    /**
+    * Halves
+    */
+    .#{$namespace}one-half          { width:50%; }
+
+    /**
+    * Thirds
+    */
+    .#{$namespace}one-third         { width:33.333%; }
+    .#{$namespace}two-thirds        { width:66.666%; }
+
+    /**
+    * Quarters
+    */
+    .#{$namespace}one-quarter       { width:25%; }
+    .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
+    .#{$namespace}three-quarters    { width:75%; }
+
+    /**
+    * Fifths
+    */
+    .#{$namespace}one-fifth         { width:20%; }
+    .#{$namespace}two-fifths        { width:40%; }
+    .#{$namespace}three-fifths      { width:60%; }
+    .#{$namespace}four-fifths       { width:80%; }
+
+    /**
+    * Sixths
+    */
+    .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}two-sixths        { @extend .#{$namespace}one-third; }
+    .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}five-sixths       { width:83.333%; }
+
+    /**
+    * Eighths
+    */
+    .#{$namespace}one-eighth        { width:12.5%; }
+    .#{$namespace}two-eighths       { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}three-eighths     { width:37.5%; }
+    .#{$namespace}four-eighths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}five-eighths      { width:62.5%; }
+    .#{$namespace}six-eighths       { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}seven-eighths     { width:87.5%; }
+
+
+    /**
+    * Tenths
+    */
+    .#{$namespace}one-tenth         { width:10%; }
+    .#{$namespace}two-tenths        { @extend .#{$namespace}one-fifth; }
+    .#{$namespace}three-tenths      { width:30%; }
+    .#{$namespace}four-tenths       { @extend .#{$namespace}two-fifths; }
+    .#{$namespace}five-tenths       { @extend .#{$namespace}one-half; }
+    .#{$namespace}six-tenths        { @extend .#{$namespace}three-fifths; }
+    .#{$namespace}seven-tenths      { width:70%; }
+    .#{$namespace}eight-tenths      { @extend .#{$namespace}four-fifths; }
+    .#{$namespace}nine-tenths       { width:90%; }
+
+    /**
+    * Twelfths
+    */
+    .#{$namespace}one-twelfth       { width:8.333%; }
+    .#{$namespace}two-twelfths      { @extend .#{$namespace}one-sixth; }
+    .#{$namespace}three-twelfths    { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}four-twelfths     { @extend .#{$namespace}one-third; }
+    .#{$namespace}five-twelfths     { width:41.666% }
+    .#{$namespace}six-twelfths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}seven-twelfths    { width:58.333%; }
+    .#{$namespace}eight-twelfths    { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}nine-twelfths     { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}ten-twelfths      { @extend .#{$namespace}five-sixths; }
+    .#{$namespace}eleven-twelfths   { width:91.666%; }
+}
+
+//@include grid-setup();
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+
+ @mixin media-query($media-query){
+
+    @if $media-query == lg{
+        @media only screen and (min-width: 64em) { @content; }
+    }
+
+    //sm: 'screen and (min-width: 35.5em)', // 568px
+    @if $media-query == sm{
+        @media screen and (min-width: 35.5em) { @content; }
+    }
+}
+
+//build grid sets
+
+  @include media-query(lg){
+      @include grid-setup("lg-");
+  }
+
+  @include media-query(sm){
+      @include grid-setup("sm-");
+  }
+
+
+.l-content {
+
+      margin: 0 auto;
+
+    @include media-query(lg) {
+      width: 64em;
+      }
+
+      @include media-query(sm) {
+      width: 100%;
+      }
+}

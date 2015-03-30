@@ -1,0 +1,16 @@
+/* block grid */
+.main-menu {
+  float: right;
+  position: relative;
+  @include outer-container;
+  font-family: $menu-font-family;
+  font-size: em(20);
+  font-weight: 300;
+
+  .menu-item {
+    float: left;
+    margin-right: 1.125em;
+    text-transform: uppercase;
+  }
+
+}

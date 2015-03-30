@@ -1,0 +1,30 @@
+//vars// Define your breakpoints//$desktop: new-breakpoint(max-width 64em);//$tablet: new-breakpoint(max-width 48em);// $mobile: new-breakpoint(max-width 35.5em);// $tablet: new-breakpoint(min-width 35.55em) and (max-width 60em);//colors$orange: #ff6633;//font$font-roboto-condensed: "Roboto Condensed";$font-roboto: "Roboto";$h-font-family: "Roboto Condensed";$menu-font-family: "Roboto Condensed";$body-font-family: "Roboto";$padding-content: em(88) 0 0 em(48);
+
+
+// grid
+$visual-grid: true;
+$visual-grid-color: #E6F6FF;
+$visual-grid-opacity: 0.4;
+
+//@import "neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+//@import "bower_components/neat/app/assets/stylesheets/_neat-helpers.scss";
+// Neat Overrides
+// $column: 90px;
+$gutter: em(20); // gutter col1 || col2
+$grid-columns: 6;
+$max-width: em(1040);
+
+// Neat Breakpoints
+//$medium-screen: em(640);
+//$large-screen: em(860);
+
+//$medium-screen-up: new-breakpoint(min-width $medium-screen 2);
+//$large-screen-up: new-breakpoint(min-width $large-screen 6);
+
+// $column: golden-ratio(1em, 3) !default; // Column width
+// $gutter: golden-ratio(1em, 1) !default; // Gutter between each two columns
+// $grid-columns: 6 !default; // Total number of columns in the grid
+// $max-width: em(1140) !default; // Max-width of the outer container
+ $border-box-sizing: true !default; // Makes all elements have a border-box layout
+// $default-feature: min-width; // Default @media feature for the breakpoint() mixin
+ $default-layout-direction: LTR !default;

@@ -1,0 +1,92 @@
+/* layout */
+
+// debug mq points
+// body {
+//   @include media($tablet) {
+//     background-color: #ccc;
+//   }
+//
+//   @include media($mobile) {
+//     background-color: green;
+//   }
+// }
+
+/* body */
+
+body{
+  margin: 0;
+}
+
+.logo {
+  float: left;
+}
+
+/* header */
+
+.l-header{
+  padding-top: em(40);
+  // @include outer-container;
+  // padding: 0em 1em 0em 1em;
+
+  .p-top {
+    margin-top:em(50);
+
+    @include media($mobile) {
+      margin-top:em(20);
+    }
+  }
+
+}
+
+.row--100p {
+  //  padding: 0em 0em 0em 0em;
+}
+
+.row {
+  @include row();
+  @include outer-container;
+  // padding: 0em 0em 0em 0em;
+}
+
+.hp-spacer-top-big {
+  margin: 1.5em 0 0 0;
+}
+
+div.element-1 {
+  @include span-columns(6);
+}
+
+div.item-100p {
+  @include span-columns(6);
+}
+
+div.element-1-2 {
+  @include span-columns(3);
+
+  @include media($mobile) {
+    @include span-columns(6);
+  }
+}
+
+div.element-1-3 {
+  @include span-columns(2);
+
+  @include media($mobile) {
+    @include span-columns(2);
+  }
+}
+
+
+/* footer */
+
+.l__footer{
+  margin-top: em(80);
+  padding-top: em(23);
+  color: #999;
+  height: em(68);
+  background-color: #ededed;
+}
+
+.l__footer--container{
+  @include outer-container;
+}

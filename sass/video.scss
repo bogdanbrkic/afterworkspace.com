@@ -1,0 +1,32 @@
+/* video
+
+<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;">
+  <iframe src="http://player.vimeo.com/video/28523422?title=0&amp;byline=0&amp;portrait=0&amp;color=4584be" frameborder="0" id="fitvid312860"></iframe>
+</div>
+
+*/
+
+.video {
+  padding: em(80) 0;
+
+}
+.video__item {
+  //padding-top: 56.25%;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+//.video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  // height: auto;
+}
+
+// wp vimeo class
+.vvqbox{
+  margin: 0 auto;
+}
+.vvqvimeo{}
