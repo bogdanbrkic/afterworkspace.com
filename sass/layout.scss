@@ -24,18 +24,20 @@ body{
 /* header */
 
 .l-header{
-  padding-top: em(40);
-  // @include outer-container;
-  // padding: 0em 1em 0em 1em;
-
-  .p-top {
-    margin-top:em(50);
+  position: relative;
 
     @include media($mobile) {
       margin-top:em(20);
     }
-  }
+}
 
+.l-header__sticky{
+  position: fixed;
+  @include row();
+  @include outer-container;
+  width:100%;
+  padding-top: em(40);
+  padding-bottom: em(20);
 }
 
 .row--100p {

@@ -3,6 +3,7 @@
   float: right;
   position: relative;
   @include outer-container;
+  color: #4A4A4A;
   font-family: $menu-font-family;
   font-size: em(20);
   font-weight: 300;
