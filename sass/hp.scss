@@ -1,19 +1,44 @@
 .hp__intro{
+  position: relative;
+  height: 800px;
 
+  .bckg{
+    // background: url("../../img/bg-index.jpg") center center/cover no-repeat;
+    height:100%;
+    // opacity: 0.4;
+  }
 
-}
+  .hp__intro--video{
+    // overflow:hidden;
+    // position: relative;
+    height: auto;
+  }
 
-.bckg{
-  background: url("../../img/bg-index.jpg") center center/cover no-repeat;
-  height:800px;
+  .content{
+    @include vertical-align;
 
-  opacity: 0.4;
+    .big-title{
+      line-height:1em;
+    }
+  }
+
 }
 
 .hp__power-nap-app{
+  height:100%;
+  position: relative;
 
+  .bckg{
+    background: url("../../img/background-photo.jpg") center center/cover no-repeat;
+    height:100%;
+  }
 }
 
 .hp__soundcloud-ux{
+  position: relative;
+
+  header{
+    padding-top:100px;
+  }
 
 }

@@ -1,0 +1,29 @@
+.social-wrapper {
+  font-family:  $font-roboto;
+  color: #9B9B9B;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:12px;
+
+  .social {
+    background: url("../../img/ui/social/sprite-social.png") no-repeat;
+    margin-right:12px;
+    float: left;
+  }
+  .fb {
+    background-position: 0 0;
+    width: 13px;
+    height: 22px;
+
+  }
+  .gplus {
+    background-position: 0 -32px;
+    width: 19px;
+    height: 20px;
+  }
+  .tw {
+    background-position: 0 -62px;
+    width: 20px;
+    height: 17px;
+  }
+}

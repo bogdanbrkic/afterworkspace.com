@@ -190,6 +190,7 @@ module.exports = function(grunt) {
   //run all
   grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim']);
   //run small tasks:
+  grunt.registerTask('build-js-css', ['buildjs', 'buildcss']);
   grunt.registerTask('buildsass', ['buildcss']);
   grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
   grunt.registerTask('buildjs',   ['concat', 'uglify']);
