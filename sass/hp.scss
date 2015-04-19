@@ -62,6 +62,7 @@
 
     .proj-txt{
       font-size:rem(24);
+      font-weight:100;
     }
 
     .proj-read-more{
@@ -88,32 +89,33 @@
   //
   .story-content{
 
-
-    .proj-img-holder{
-      text-align: center;
-    }
-
     .proj-txt-holder{
       padding-top: 0;
       text-align: center;
+      margin-bottom: 10%;
     }
 
     .proj-name{
-      font-size:rem(40);
+      font-size:rem(70);
       line-height: normal;
       font-weight:700;
-      color:#999;
+      color:#4A4A4A;
     }
 
     .proj-slogan{
-      font-size:rem(24);
+      font-size:rem(34);
       font-weight:100;
-      line-height: initial;
-      margin-bottom: 10%;
+      line-height: 30px;
+      margin-bottom: 6%;
     }
 
     .proj-txt{
       font-size:rem(24);
+      font-weight:100;
+      color: #4A4A4A;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 3%;
     }
 
     .proj-read-more{
@@ -121,12 +123,16 @@
       font-style: italic;
       font-weight:700;
       color: $red;
-      // text-decoration: underline;
+
       strong{
         border-bottom: 1px solid $red;
       }
-
     }
+
+    .proj-img-holder{
+      text-align: center;
+    }
+
   }
 
 

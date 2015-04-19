@@ -90,17 +90,17 @@ div.element-1-3:last-child{margin-right:0;}
 .hp__power-nap-app .story-content .proj-txt-holder{padding-top:15%;}
 .hp__power-nap-app .story-content .proj-name{font-size:4.375rem;line-height:normal;font-weight:700;}
 .hp__power-nap-app .story-content .proj-slogan{font-size:4.375rem;font-weight:100;line-height:initial;margin-bottom:10%;}
-.hp__power-nap-app .story-content .proj-txt{font-size:1.5rem;}
+.hp__power-nap-app .story-content .proj-txt{font-size:1.5rem;font-weight:100;}
 .hp__power-nap-app .story-content .proj-read-more{font-size:1.25rem;font-style:italic;font-weight:700;color:#ff4646;}
 .hp__power-nap-app .story-content .proj-read-more strong{border-bottom:1px solid #ff4646;}
 .hp__soundcloud-ux{position:relative;height:100%;}
-.hp__soundcloud-ux .story-content .proj-img-holder{text-align:center;}
-.hp__soundcloud-ux .story-content .proj-txt-holder{padding-top:0;text-align:center;}
-.hp__soundcloud-ux .story-content .proj-name{font-size:2.5rem;line-height:normal;font-weight:700;color:#999;}
-.hp__soundcloud-ux .story-content .proj-slogan{font-size:1.5rem;font-weight:100;line-height:initial;margin-bottom:10%;}
-.hp__soundcloud-ux .story-content .proj-txt{font-size:1.5rem;}
+.hp__soundcloud-ux .story-content .proj-txt-holder{padding-top:0;text-align:center;margin-bottom:10%;}
+.hp__soundcloud-ux .story-content .proj-name{font-size:4.375rem;line-height:normal;font-weight:700;color:#4a4a4a;}
+.hp__soundcloud-ux .story-content .proj-slogan{font-size:2.125rem;font-weight:100;line-height:30px;margin-bottom:6%;}
+.hp__soundcloud-ux .story-content .proj-txt{font-size:1.5rem;font-weight:100;color:#4a4a4a;width:60%;margin:auto;margin-bottom:3%;}
 .hp__soundcloud-ux .story-content .proj-read-more{font-size:1.25rem;font-style:italic;font-weight:700;color:#ff4646;}
 .hp__soundcloud-ux .story-content .proj-read-more strong{border-bottom:1px solid #ff4646;}
+.hp__soundcloud-ux .story-content .proj-img-holder{text-align:center;}
 .story__header{font-family:Roboto;padding-top:30px;padding-left:40px;padding-right:40px;padding-bottom:100px;}
 .story__header .story__number--big{width:86px;color:#ff4646;font-size:70px;line-height:90px;font-weight:700;}
 .story__header .story__number--small-txt{display:table;font-size:14px;line-height:15px;letter-spacing:3px;padding-bottom:10px;}
