@@ -1,22 +1,28 @@
 .hp__intro {
   position: relative;
   height: 800px;
+  @include media($mobile) {
+    height: 500px;
+  }
   .bckg {
-    // background: url("../../img/bg-index.jpg") center center/cover no-repeat;
     height: 100%;
-    // opacity: 0.4;
   }
   .hp__intro--video {
-    // overflow:hidden;
-    // position: relative;
     height: auto;
   }
   .content {
     @include vertical-align;
 
     .big-title {
+      font-family: $font-roboto;
+      font-size: 120px;
+      font-weight: 700;
+      color: $red;
       line-height: 1em;
-      color: #dcdcdc;
+      // color: #dcdcdc;
+      @include media($mobile){
+        font-size: 60px;
+      }
     }
     .slogan{
       color: #dcdcdc;
