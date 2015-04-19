@@ -37,11 +37,12 @@ div.element-1 {
 div.item-100p {
   @include span-columns(6);
 }
-div.element-1-2 {
+div.element-1-2,
+.l-col-1-2 {
   @include span-columns(3);
-  @include media($mobile) {
-    @include span-columns(6);
-  }
+  // @include media($mobile) {
+    // @include span-columns(6);
+  // }
 }
 div.element-1-3 {
   @include span-columns(2);
