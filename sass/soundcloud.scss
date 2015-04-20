@@ -1,33 +1,39 @@
-.u-soundcloud-pg{
-  text-align: center;
+.u-soundcloud-pg {
 
-  .slide-header{
-    h1{
+  text-align: center;
+  .slide-header {
+    h1 {
+      color: #4a4a4a;
       font-family: $font-roboto;
       font-size: 90px;
       font-weight: 700;
       line-height: 1em;
-      .orange{
+      .orange {
         color: $orange;
       }
     }
+    h2 {
+      color: #4a4a4a;
+      font-family: $font-roboto;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1em;
+    }
   }
 
-  .slide-content{
-    p{
-      padding-top:80px;
-      // font-size:24px;
-      // line-height:30px;
-
-      //
+  .slide-content {
+    p {
+      padding-top: 80px;
       font-size: 1.5rem;
       font-weight: 100;
       color: #4a4a4a;
       width: 80%;
       margin: auto auto 3%;
     }
-    img{
-      padding-top:110px;
+    img {
+      padding-top: 110px;
+      padding-bottom: 110px;
     }
   }
+
 }
