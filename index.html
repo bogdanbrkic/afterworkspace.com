@@ -24,6 +24,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic,900,100' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="build/css/master.min.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css" />
   <!-- GA tag -->
 </head>
 
@@ -79,7 +80,7 @@
 
       <div class="row story-content">
         <div class="l-col-1-2 proj-img-holder">
-          <img src="img/iphone-powernap.png" alt="power nap app for iphone ios" />
+          <img class="wow fadeIn" data-wow-duration="2s" data-wow-offset="200" src="img/iphone-powernap.png" alt="power nap app for iphone ios" />
         </div>
         <div class="l-col-1-2 proj-txt-holder">
           <h2 class="proj-name">POWER NAP</h2>
@@ -111,7 +112,7 @@
           <a class="proj-read-more" href="soundcloud-rethinked-ux.htm" target="_blank"><strong>read more</strong></a>
         </div>
         <div>
-          <img src="img/soundcloud-experience-3.jpg" alt="soundcloud ui ux / userexperiance" />
+          <img  class="wow fadeIn" data-wow-duration="2s" data-wow-offset="200"  src="img/soundcloud-experience-3.jpg" alt="soundcloud ui ux / userexperiance" />
         </div>
       </div>
 
@@ -132,6 +133,19 @@
 <!--  -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="build/js/base.min.js"></script>
+<script src="bower_components/wowjs/dist/wow.min.js"></script>
+<script>
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+  wow.init();
+</script>
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TTFN9B"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -1555,8 +1555,6 @@ var resizeVideoBackground = function() {
 $( window ).on( 'resize', function() {
   resizeVideoBackground();
 });
-resizeVideoBackground();
-
 
 /* =======================================
 * On win load
