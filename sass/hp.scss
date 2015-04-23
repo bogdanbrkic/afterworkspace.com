@@ -12,7 +12,6 @@
   }
   .content {
     @include vertical-align;
-
     .big-title {
       font-family: $font-roboto;
       font-size: 120px;
@@ -20,176 +19,138 @@
       color: $red;
       line-height: 1em;
       // color: #dcdcdc;
-      @include media($mobile){
+      @include media($mobile) {
         font-size: 60px;
       }
     }
-    .slogan{
+    .slogan {
       color: #dcdcdc;
     }
   }
 }
-
-
 /* Power nap app */
 .hp__power-nap-app {
   height: 100%;
   position: relative;
-
   .bckg {
     background: url("../../img/background-photo.jpg") center center/cover no-repeat;
     height: 100%;
   }
-
   /* story content */
-  .story-content{
+  .story-content {
     color: #fff;
-
-    .proj-img-holder{
+    .proj-img-holder {
       text-align: right;
     }
-
-    .proj-txt-holder{
+    .proj-txt-holder {
       padding-top: 15%;
     }
-
-    .proj-name{
-      font-size:rem(70);
+    .proj-name {
+      font-size: rem(70);
       line-height: normal;
-      font-weight:700;
+      font-weight: 700;
     }
-
-    .proj-slogan{
-      font-size:rem(70);
-      font-weight:100;
+    .proj-slogan {
+      font-size: rem(70);
+      font-weight: 100;
       line-height: initial;
       margin-bottom: 10%;
     }
-
-    .proj-txt{
-      font-size:rem(24);
-      font-weight:100;
+    .proj-txt {
+      font-size: rem(24);
+      font-weight: 100;
     }
-
-    .proj-read-more{
-      font-size:rem(20);
+    .proj-read-more {
+      font-size: rem(20);
       font-style: italic;
-      font-weight:700;
+      font-weight: 700;
       color: $red;
       // text-decoration: underline;
-      strong{
+      strong {
         border-bottom: 1px solid $red;
       }
-
     }
   }
-
 }
-
-
 /* Soundcloud */
 .hp__soundcloud-ux {
   position: relative;
   height: 100%;
-
   //
-  .story-content{
-
-    .proj-txt-holder{
+  .story-content {
+    .proj-txt-holder {
       padding-top: 0;
       text-align: center;
       margin-bottom: 10%;
     }
-
-    .proj-name{
-      font-size:rem(70);
+    .proj-name {
+      font-size: rem(70);
       line-height: normal;
-      font-weight:700;
-      color:#4A4A4A;
+      font-weight: 700;
+      color: #4a4a4a;
     }
-
-    .proj-slogan{
-      font-size:rem(34);
-      font-weight:100;
+    .proj-slogan {
+      font-size: rem(34);
+      font-weight: 100;
       line-height: 30px;
       margin-bottom: 6%;
     }
-
-    .proj-txt{
-      font-size:rem(24);
-      font-weight:100;
-      color: #4A4A4A;
+    .proj-txt {
+      font-size: rem(24);
+      font-weight: 100;
+      color: #4a4a4a;
       width: 60%;
-      margin: auto;
-      margin-bottom: 3%;
+      margin: auto auto 3%;
     }
-
-    .proj-read-more{
-      font-size:rem(20);
+    .proj-read-more {
+      font-size: rem(20);
       font-style: italic;
-      font-weight:700;
+      font-weight: 700;
       color: $red;
-
-      strong{
+      strong {
         border-bottom: 1px solid $red;
       }
     }
-
-    .proj-img-holder{
+    .proj-img-holder {
       text-align: center;
     }
-
   }
-
-
-
 }
-
-
 /* Story header & footer*/
 .story__header {
   font-family: $font-roboto;
-  padding-top: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 100px;
-
+  padding: 30px 40px 100px;
   .story__number--big {
     width: 90px;
-    color: #FF4646;
+    color: #ff4646;
     font-size: 70px;
-    line-height:90px;
+    line-height: 90px;
     font-weight: 700;
   }
-
-  .story__number--small-txt{
+  .story__number--small-txt {
     display: table;
-    font-size:14px;
+    font-size: 14px;
     // height:15px;
-    line-height:15px;
-    letter-spacing:3px;
-    padding-bottom:10px;
+    line-height: 15px;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
   }
-
   .story__dash {
     // background-color: #a55cdc;
   }
-
-  .border-right-white{
+  .border-right-white {
     border-right: 1px solid white;
   }
-  .border-bottom-white{
-    border-bottom:1px solid white;
+  .border-bottom-white {
+    border-bottom: 1px solid white;
   }
-  .border-right-black{
+  .border-right-black {
     border-right: 1px solid #ccc;
   }
-  .border-bottom-black{
-    border-bottom: 1px solid  #ccc;
+  .border-bottom-black {
+    border-bottom: 1px solid #ccc;
   }
 }
-
-
-.story__footer{
+.story__footer {
   padding-bottom: 100px;
 }
