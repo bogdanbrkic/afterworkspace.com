@@ -3,20 +3,28 @@
   float: right;
   position: relative;
   @include outer-container;
-  color: #4A4A4A;
-  font-family: $menu-font-family;
-  font-size: em(20);
-  font-weight: 300;
+
 
   .menu-item {
     float: left;
     margin-right: 1.125em;
     text-transform: uppercase;
+
+    a {
+      color: #bebebe;
+      font-family: $menu-font-family;
+      font-size: em(16);
+      font-weight: 300;
+      letter-spacing: rem(1);
+      &:hover{
+        border-bottom: 1px solid #bebebe;
+      }
+    }
+
   }
 
   .menu-item .last{
     margin-right: 0;
   }
-
 
 }
