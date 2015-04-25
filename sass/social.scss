@@ -1,29 +1,42 @@
+$social-speed: 0.4s;
+
 .social-wrapper {
-  font-family:  $font-roboto;
-  color: #9B9B9B;
+  font-family: $font-roboto;
+  color: #9b9b9b;
   display: inline-block;
   vertical-align: middle;
-  margin-right:12px;
+  margin-right: 12px;
 
   .social {
-    background: url("../../img/ui/social/sprite-social.png") no-repeat;
-    margin-right:12px;
+    background: url("../../img/ui/social/social.png") no-repeat top left;
+    width: 34px;
+    height: 34px;
+    margin-right: 12px;
     float: left;
   }
   .fb {
-    background-position: 0 0;
-    width: 13px;
-    height: 22px;
-
+    background-position: 0 -44px;
+    @include transition (background $social-speed $ease-in-out-quad);
+    &:hover{
+      background-position: 0 0;
+      @include transition (background $social-speed $ease-in-out-quad);
+    }
   }
   .gplus {
-    background-position: 0 -32px;
-    width: 19px;
-    height: 20px;
+    background-position: 0 -132px;
+    @include transition (background $social-speed $ease-in-out-quad);
+    &:hover{
+      background-position: 0 -88px;
+      @include transition (background $social-speed $ease-in-out-quad);
+    }
   }
   .tw {
-    background-position: 0 -62px;
-    width: 20px;
-    height: 17px;
+    background-position: 0 -220px;
+    @include transition (background $social-speed $ease-in-out-quad);
+    &:hover{
+      background-position: 0 -176px;
+      @include transition (background $social-speed $ease-in-out-quad);
+    }
   }
+
 }
