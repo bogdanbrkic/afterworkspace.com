@@ -1,6 +1,7 @@
 .hp__intro {
   position: relative;
-  height: 800px;
+  height: 900px;
+
   @include media($mobile) {
     height: 500px;
   }
