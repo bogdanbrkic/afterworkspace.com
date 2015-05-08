@@ -1508,7 +1508,7 @@
 * Init js
 * =======================================
 */
-;console.log('am in..');
+;console.log('Hello visitor & wellcome to afterwork space.');
 
 
 /* =======================================
