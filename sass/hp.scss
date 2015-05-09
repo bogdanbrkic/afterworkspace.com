@@ -31,10 +31,11 @@
 }
 /* Power nap app */
 .hp__power-nap-app {
+  font-family: $font-roboto;
   height: 100%;
   position: relative;
   .bckg {
-    background: url("../../img/background-photo.jpg") center center/cover no-repeat;
+    background: #1e1e25;
     height: 100%;
   }
   /* story content */
@@ -49,17 +50,23 @@
     .proj-name {
       font-size: rem(70);
       line-height: normal;
-      font-weight: 700;
+      font-weight: 500;
+      color: #D2CCCC;
+      letter-spacing: 3px;
     }
     .proj-slogan {
-      font-size: rem(70);
+      font-size: rem(58);
       font-weight: 100;
-      line-height: initial;
       margin-bottom: 10%;
+      color: #3D3D43;
+      letter-spacing: 2px;
+      line-height: 38px;
     }
     .proj-txt {
       font-size: rem(24);
-      font-weight: 100;
+      font-weight: 300;
+      color: #B5B1B1;
+      line-height: 34px;
     }
     .proj-read-more {
       font-size: rem(20);
@@ -98,7 +105,7 @@
     }
     .proj-txt {
       font-size: rem(24);
-      font-weight: 100;
+      font-weight: 300;
       color: #4a4a4a;
       width: 60%;
       margin: auto auto 3%;
@@ -140,10 +147,10 @@
     // background-color: #a55cdc;
   }
   .border-right-white {
-    border-right: 1px solid white;
+    border-right: 1px solid #3f3f45;
   }
   .border-bottom-white {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #3f3f45;
   }
   .border-right-black {
     border-right: 1px solid #ccc;

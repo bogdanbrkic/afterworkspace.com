@@ -57,20 +57,3 @@ $( window ).on( 'resize', function() {
 $( window ).load(function() {
   resizeVideoBackground();
 });
-
-
-/* =======================================
-* Fancybox
-* =======================================
-*/
-//Change title position; show overlay after content has loaded
-$(".fancybox").fancybox({
-    helpers:  {
-        title : {
-            type : 'inside'
-        },
-        overlay : {
-            showEarly : false
-        }
-    }
-});
