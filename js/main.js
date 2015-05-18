@@ -88,3 +88,16 @@ $(window).on('scroll', function() {
 //     $(this).show().addClass('bounceIn').next().show();
 //   });
 // });
+/* =======================================
+ * WOW - anima
+ * =======================================
+ */
+wow = new WOW({
+  animateClass: 'animated',
+  offset: 50,
+  mobile: false,
+  callback: function(box) {
+  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+  }
+});
+wow.init();

@@ -102,7 +102,9 @@ module.exports = function(grunt) {
 
     cssmin: {
       build: {
-        src: 'build/css/master.css',
+        src: [
+          'build/css/master.css',
+          'bower_components/animate.css/animate.min.css'],
         dest: 'build/css/master.min.css'
       }
     },
@@ -115,7 +117,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+        'build/js/modernizr-custom.js',
         'js/plugins.js',
+        'bower_components/wowjs/dist/wow.min.js',
         'bower_components/fitvids/jquery.fitvids.js' ,
         'bower_components/underscore/underscore.js',
         'js/main.js' ],
@@ -189,6 +193,8 @@ module.exports = function(grunt) {
 
   //run all
   grunt.registerTask('all', ['modernizr', 'buildjs', 'buildcss', 'imageoptim']);
+  grunt.registerTask('all--img', ['modernizr', 'buildjs', 'buildcss']);
+
   //run small tasks:
   grunt.registerTask('build-js-css', ['buildjs', 'buildcss']);
   grunt.registerTask('buildsass', ['buildcss']);
