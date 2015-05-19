@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <style type="text/css" media="screen">
-    /* LOADING */
-    .loadMask{position:fixed;z-index:2000;height:100%;width:100%;background:#000;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;opacity:1}
-    .loadend .loadMask{opacity:0;}
-    .learnmore .loadMask{display:none;}
-    .loadcenter_wrap{position:relative;-moz-perspective:500px;-webkit-perspective:500;-o-perspective:500;-ms-perspective:500;}
-    .loadcenter_wrap p{position:absolute;z-index:2;width:100%;text-align:center;color:#fff;}
-    .loadcenter{height:320px;width:320px;margin:-160px 0 0 -160px;top:50%;left:50%;position:absolute;}
-    .loadcenter svg{position:absolute;top:0;left:0;-webkit-transform-origin:center center;-ms-transform-origin:center center;-o-transform-origin:center center;transform-origin:center center;-webkit-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;-webkit-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg);}
-    .loadcenter path{fill:none;stroke:#fff;stroke-width:1;fill:none;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;}
-    .loadcenter .l1 path{stroke-dasharray:450;stroke-dashoffset:900;-webkit-animation:LOADING1 4s linear 0s infinite;-o-animation:LOADING1 4s linear 0s infinite;animation:LOADING1 4s linear 0s infinite;}
-    .loadcenter .l2 path{stroke-dasharray:340;stroke-dashoffset:340;-webkit-animation:LOADING2 3s linear 0s infinite;-o-animation:LOADING2 3s linear 0s infinite;animation:LOADING2 3s linear 0s infinite;}
-    .loadcenter .l3 path{stroke-dasharray:230;stroke-dashoffset:230;-webkit-animation:LOADING3 2s linear 0s infinite;-o-animation:LOADING3 2s linear 0s infinite;animation:LOADING3 2s linear 0s infinite;}
-    @-webkit-keyframes LOADING1{0%{stroke-dashoffset:-900;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:900;}}
-    @-moz-keyframes LOADING1{0%{stroke-dashoffset:-900;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:900;}}
-    @-o-keyframes LOADING1{0%{stroke-dashoffset:-900;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:900;}}
-    @keyframes LOADING1{0%{stroke-dashoffset:-900;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:900;}}
-    @-webkit-keyframes LOADING2{0%{stroke-dashoffset:340;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:-340;}}
-    @-moz-keyframes LOADING2{0%{stroke-dashoffset:340;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:-340;}}
-    @-o-keyframes LOADING2{0%{stroke-dashoffset:340;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:-340;}}
-    @keyframes LOADING2{0%{stroke-dashoffset:340;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:-340;}}
-    @-webkit-keyframes LOADING3{0%{stroke-dashoffset:-230;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:230;}}
-    @-moz-keyframes LOADING3{0%{stroke-dashoffset:-230;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:230;}}
-    @-o-keyframes LOADING3{0%{stroke-dashoffset:-230;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:230;}}
-    @keyframes LOADING3{0%{stroke-dashoffset:-230;}50%{stroke-dashoffset:0;}100%{stroke-dashoffset:230;}}
-    .loadcenter_wrap .l1{-webkit-animation:TURN 2.5s linear 0s infinite;-o-animation:TURN 2.5s linear 0s infinite;animation:TURN 2.5s linear 0s infinite;}
-    .loadcenter_wrap .l2{-webkit-animation:TURN 2s linear 0s infinite;-o-animation:TURN 2s linear 0s infinite;animation:TURN 2s linear 0s infinite;}
-    .loadcenter_wrap .l3{-webkit-animation:TURN 1.5s linear 0s infinite;-o-animation:TURN 1.5s linear 0s infinite;animation:TURN 1.5s linear 0s infinite;}
-    @-webkit-keyframes TURN{0%{-webkit-transform:rotateY(0deg);opacity:1} 25%{-webkit-transform:rotateY(90deg);opacity:.6} 50%{-webkit-transform:rotateY(180deg);opacity:1} 75%{-webkit-transform:rotateY(270deg);opacity:.6} 100%{-webkit-transform:rotateY(360deg);opacity:1}}
-    @-webkit-keyframes TURNBACK{0%{-webkit-transform:rotateY(360deg);opacity:1} 25%{-webkit-transform:rotateY(270deg);opacity:.6} 50%{-webkit-transform:rotateY(180deg);opacity:1} 75%{-webkit-transform:rotateY(90deg);opacity:.6} 100%{-webkit-transform:rotateY(0deg);opacity:1}}
-    </style>
-  </head>
-  <body >
-    <!-- A -->
-    <svg class="l1" width="320" height="320">
-      <path data-start="0" data-duration="10" fill="#262626" d="M35.684,59.203l-2.255-6.314H22.85l-2.299,6.314h-5.206l10.784-28.536h4.02l10.783,28.536H35.684z
-        M30.067,42.886l-1.885-5.866h-0.127l-1.844,5.74l-1.926,5.906h7.667L30.067,42.886z" />
-      </svg>
-      <!-- W -->
-      <svg class="l2" width="320" height="320">
-        <path fill="#262626" d="M58.282,40.314c-0.025,0-0.048,0.01-0.062,0.021c-0.014,0.013-0.031,0.023-0.057,0.023
-          c-0.467,1.749-0.926,3.484-1.377,5.207c-0.453,1.725-0.908,3.459-1.373,5.205c-0.055,0.193-0.146,0.521-0.268,0.982
-          c-0.121,0.463-0.271,1-0.451,1.6c-0.182,0.599-0.357,1.23-0.533,1.885c-0.18,0.658-0.355,1.285-0.533,1.892
-          c-0.18,0.604-0.33,1.133-0.455,1.597c-0.119,0.465-0.213,0.807-0.262,1.028h-4.145l-7.435-28.54h5.301
-          c0.55,2.353,1.089,4.676,1.615,6.971c0.539,2.296,1.063,4.621,1.586,6.971l1.147,5.207h0.164l1.31-5.168
-          c0.571-2.078,1.062-3.848,1.455-5.309c0.394-1.463,0.746-2.714,1.047-3.749c0.304-1.041,0.558-1.94,0.765-2.707
-          c0.2-0.767,0.414-1.503,0.635-2.215h3.77c0.684,2.353,1.355,4.703,2.012,7.053c0.654,2.353,1.295,4.7,1.92,7.054l1.355,5.081h0.162
-          c0.189-0.791,0.365-1.633,0.531-2.52c0.166-0.888,0.326-1.729,0.492-2.518c0.467-2.133,0.979-4.445,1.541-6.933
-          c0.557-2.487,1.125-4.892,1.698-7.218h5.25c-1.231,4.784-2.461,9.54-3.692,14.269c-1.229,4.729-2.476,9.487-3.734,14.272H63.57
-          c-0.467-1.728-0.941-3.438-1.418-5.147c-0.476-1.705-0.963-3.426-1.452-5.145c-0.386-1.533-0.779-3.059-1.188-4.573
-          C59.104,43.368,58.693,41.846,58.282,40.314z" />
-        </svg>
-      </body>
-    </html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>svg</title>
+  <style type="text/css" media="screen">
+
+    .l-a {
+       -webkit-animation: animation: l-float 5s linear infinite;
+    }
+
+    .l-a--path {
+     
+    }
+
+    .l-w{
+
+    }
+
+    .l-w--path{
+
+    }
+
+    @-webkit-keyframes l-float {
+      0%   {transform: translateY(0)}
+      25%  {transform: translateY(-250px)}
+      75%  {transform: translateY(250px)}
+      100% {transform: translateY(0)}
+    }
+
+
+@-webkit-keyframes ufo-big {
+  0%        {opacity: 0}
+  15%, 70%  {opacity: 1}
+  85%, 100% {opacity: 0}
+}
+
+.ufo-big {
+  -webkit-animation: animation: ufo-big 5s ease infinite;
+}
+
+  </style>
+</head>
+<body >
+  <!-- A -->
+  <svg class="l-a">
+    <path class="l-a--path ufo-big"  d="M35.684,59.203l-2.255-6.314H22.85l-2.299,6.314h-5.206l10.784-28.536h4.02l10.783,28.536H35.684z
+    M30.067,42.886l-1.885-5.866h-0.127l-1.844,5.74l-1.926,5.906h7.667L30.067,42.886z" />
+  </svg>
+  <!-- W -->
+<!--   <svg class="l-w">
+    <path class="l-w--path" d="M58.282,40.314c-0.025,0-0.048,0.01-0.062,0.021c-0.014,0.013-0.031,0.023-0.057,0.023
+    c-0.467,1.749-0.926,3.484-1.377,5.207c-0.453,1.725-0.908,3.459-1.373,5.205c-0.055,0.193-0.146,0.521-0.268,0.982
+    c-0.121,0.463-0.271,1-0.451,1.6c-0.182,0.599-0.357,1.23-0.533,1.885c-0.18,0.658-0.355,1.285-0.533,1.892
+    c-0.18,0.604-0.33,1.133-0.455,1.597c-0.119,0.465-0.213,0.807-0.262,1.028h-4.145l-7.435-28.54h5.301
+    c0.55,2.353,1.089,4.676,1.615,6.971c0.539,2.296,1.063,4.621,1.586,6.971l1.147,5.207h0.164l1.31-5.168
+    c0.571-2.078,1.062-3.848,1.455-5.309c0.394-1.463,0.746-2.714,1.047-3.749c0.304-1.041,0.558-1.94,0.765-2.707
+    c0.2-0.767,0.414-1.503,0.635-2.215h3.77c0.684,2.353,1.355,4.703,2.012,7.053c0.654,2.353,1.295,4.7,1.92,7.054l1.355,5.081h0.162
+    c0.189-0.791,0.365-1.633,0.531-2.52c0.166-0.888,0.326-1.729,0.492-2.518c0.467-2.133,0.979-4.445,1.541-6.933
+    c0.557-2.487,1.125-4.892,1.698-7.218h5.25c-1.231,4.784-2.461,9.54-3.692,14.269c-1.229,4.729-2.476,9.487-3.734,14.272H63.57
+    c-0.467-1.728-0.941-3.438-1.418-5.147c-0.476-1.705-0.963-3.426-1.452-5.145c-0.386-1.533-0.779-3.059-1.188-4.573
+    C59.104,43.368,58.693,41.846,58.282,40.314z" />
+  </svg> -->
+</body>
+</html>
