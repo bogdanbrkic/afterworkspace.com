@@ -1,8 +1,17 @@
-.hp__intro {
-  display:none; // while preload hide
+.ui-container {
+  top: 900px;
   position: relative;
+  z-index: 20;
+  @include media($mobile) {
+    top: 500px;
+  }
+}
+.hp__intro {
+  display: none; // while preload hide
+  width: 100%;
   height: 900px;
-
+  position: fixed;
+  z-index: 1;
   @include media($mobile) {
     height: 500px;
   }
@@ -20,6 +29,7 @@
       font-weight: 700;
       color: $red;
       line-height: 1em;
+
       // color: #dcdcdc;
       @include media($mobile) {
         font-size: 60px;
@@ -30,11 +40,13 @@
     }
   }
 }
+
 /* Power nap app */
 .hp__power-nap-app {
   font-family: $font-roboto;
-  height: 100%;
-  position: relative;
+
+  // height: 100%;
+  // position: relative;
   .bckg {
     background: #1e1e25;
     height: 100%;
@@ -42,6 +54,9 @@
   /* story content */
   .story-content {
     color: #fff;
+    @include media($mobile) {
+      padding: 0 4%;
+    }
     .proj-img-holder {
       text-align: right;
     }
@@ -49,24 +64,27 @@
       padding-top: 15%;
     }
     .proj-name {
-      font-size: rem(70);
+      font-size: 4.3rem;
+      @include media($mobile) {
+        font-size: 3rem;
+      }
       line-height: normal;
       font-weight: 700;
-      color: #D2CCCC;
+      color: #d2cccc;
       letter-spacing: 3px;
     }
     .proj-slogan {
       font-size: rem(58);
       font-weight: 100;
       margin-bottom: 10%;
-      color: #3D3D43;
+      color: #3d3d43;
       letter-spacing: 2px;
       line-height: 38px;
     }
     .proj-txt {
       font-size: rem(24);
       font-weight: 300;
-      color: #B5B1B1;
+      color: #b5b1b1;
       line-height: 34px;
     }
     .proj-read-more {
@@ -74,6 +92,7 @@
       font-style: italic;
       font-weight: 700;
       color: $red;
+
       // text-decoration: underline;
       strong {
         border-bottom: 1px solid $red;
@@ -83,17 +102,24 @@
 }
 /* Soundcloud */
 .hp__soundcloud-ux {
-  position: relative;
-  height: 100%;
+  background-color: #fff;
+
+  // height: 100%;
   //
   .story-content {
+    @include media($mobile) {
+      padding: 0 4%;
+    }
     .proj-txt-holder {
       padding-top: 0;
       text-align: center;
       margin-bottom: 10%;
     }
     .proj-name {
-      font-size: rem(70);
+      font-size: 4.3rem;
+      @include media($mobile) {
+        font-size: 3rem;
+      }
       line-height: normal;
       font-weight: 700;
       color: #4a4a4a;
@@ -139,12 +165,14 @@
   .story__number--small-txt {
     display: table;
     font-size: 14px;
+
     // height:15px;
     line-height: 15px;
     letter-spacing: 3px;
     padding-bottom: 10px;
   }
   .story__dash {
+
     // background-color: #a55cdc;
   }
   .border-right-white {

@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>svg</title>
   <style type="text/css" media="screen">
-/*
-  -webkit-animation: NAME-YOUR-ANIMATION 5s infinite; 
-  -moz-animation:    NAME-YOUR-ANIMATION 5s infinite; 
-  -o-animation:      NAME-YOUR-ANIMATION 5s infinite; 
+    /*
+  -webkit-animation: NAME-YOUR-ANIMATION 5s infinite;
+  -moz-animation:    NAME-YOUR-ANIMATION 5s infinite;
+  -o-animation:      NAME-YOUR-ANIMATION 5s infinite;
   */
 
-  html, body{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-  }
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
 
-  .wraper{
-    height: 100%;
-    background-color: #F2F2F2;
-  }
+    .wraper {
+      height: 100%;
+      background-color: #F2F2F2;
+    }
 
-  .preloader{
-    perspective: 500px;
-    perspective-origin: 25% 50%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-  }
+    .preloader {
+      perspective: 500px;
+      perspective-origin: 25% 50%;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-80%);
+    }
 
-  .preloader{
-    margin: 0 auto;
-    text-align: center;
+    .preloader {
+      margin: 0 auto;
+      text-align: center;
+    }
 
-  }
+    .l-a {
+      -webkit-animation: spin 3s infinite linear;
+    }
 
-  .l-a{
-    -webkit-animation: spin 3s infinite linear;
-
-  }
-
-  .l-w{
-    -webkit-animation: spin 2s infinite linear;
-  }
-
-
-
-/* 
+    .l-w {
+      -webkit-animation: spin 2s infinite linear;
+    }
+    /*
  * animation
  *
  */
 
-  @-webkit-keyframes spin {
-    0%  { 
-      transform:rotateY(0deg); 
-      /*transform: scale(3); */
+    @-webkit-keyframes spin {
+      0% {
+        transform: rotateY(0deg);
+        /*transform: scale(3); */
+      }
+      50% {
+        transform: rotateY(180deg);
+        /*transform: scale(1); */
+      }
+      100% {
+        transform: rotateY(360deg);
+        /*transform: scale(3); */
+      }
     }
-    50% { 
-      transform:rotateY(180deg); 
-      /*transform: scale(1); */
-    }
-    100% { 
-      transform:rotateY(360deg); 
-      /*transform: scale(3); */
-    }
-  }
 
-  @-webkit-keyframes spin-rev {
-    0% {
-      transform: rotateY(0deg); 
-      /*transform: scale(3); */
+    @-webkit-keyframes spin-rev {
+      0% {
+        transform: rotateY(0deg);
+        /*transform: scale(3); */
+      }
+      50% {
+        transform: rotateY(180deg);
+        /*transform: scale(2); */
+      }
+      100% {
+        transform: rotateY(360deg);
+        /*transform: scale(3);  */
+      }
     }
-    50% { 
-      transform: rotateY(180deg); 
-      /*transform: scale(2); */
-    }
-    100% { 
-      transform: rotateY(360deg);
-      /*transform: scale(3);  */
-    }
-  }
-
-
   </style>
 </head>
-<body >
 
-<div class="wraper">
-  <div class="preloader"> 
-    <!-- A -->
-    <svg class="l-a">
-      <path class="l-a--path"  d="M35.684,59.203l-2.255-6.314H22.85l-2.299,6.314h-5.206l10.784-28.536h4.02l10.783,28.536H35.684z
+<body>
+
+  <div class="wraper">
+    <div class="preloader">
+      <!-- A -->
+      <svg class="l-a">
+        <path class="l-a--path" d="M35.684,59.203l-2.255-6.314H22.85l-2.299,6.314h-5.206l10.784-28.536h4.02l10.783,28.536H35.684z
       M30.067,42.886l-1.885-5.866h-0.127l-1.844,5.74l-1.926,5.906h7.667L30.067,42.886z" />
-    </svg>
+      </svg>
 
-    <!-- W -->
-    <svg class="l-w">
-      <path class="l-w--path" d="M58.282,40.314c-0.025,0-0.048,0.01-0.062,0.021c-0.014,0.013-0.031,0.023-0.057,0.023
+      <!-- W -->
+      <svg class="l-w">
+        <path class="l-w--path" d="M58.282,40.314c-0.025,0-0.048,0.01-0.062,0.021c-0.014,0.013-0.031,0.023-0.057,0.023
       c-0.467,1.749-0.926,3.484-1.377,5.207c-0.453,1.725-0.908,3.459-1.373,5.205c-0.055,0.193-0.146,0.521-0.268,0.982
       c-0.121,0.463-0.271,1-0.451,1.6c-0.182,0.599-0.357,1.23-0.533,1.885c-0.18,0.658-0.355,1.285-0.533,1.892
       c-0.18,0.604-0.33,1.133-0.455,1.597c-0.119,0.465-0.213,0.807-0.262,1.028h-4.145l-7.435-28.54h5.301
@@ -108,10 +104,11 @@
       c0.557-2.487,1.125-4.892,1.698-7.218h5.25c-1.231,4.784-2.461,9.54-3.692,14.269c-1.229,4.729-2.476,9.487-3.734,14.272H63.57
       c-0.467-1.728-0.941-3.438-1.418-5.147c-0.476-1.705-0.963-3.426-1.452-5.145c-0.386-1.533-0.779-3.059-1.188-4.573
       C59.104,43.368,58.693,41.846,58.282,40.314z" />
-    </svg>
+      </svg>
+    </div>
   </div>
-</div>
 
 
 </body>
+
 </html>

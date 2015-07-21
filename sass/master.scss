@@ -30,4 +30,5 @@ $mobile: new-breakpoint(max-width 35.5em);
 @import "menu.scss";
 @import "social.scss";
 @import "soundcloud.scss";
-@import 'print.scss'; //uncomment after work is done / on end
+@import "preloader-seq.scss";
+@import "print.scss"; //uncomment after work is done / on end

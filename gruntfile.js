@@ -120,7 +120,6 @@ module.exports = function(grunt) {
         'build/js/modernizr-custom.js',
         'js/plugins.js',
         'bower_components/wowjs/dist/wow.min.js',
-        'bower_components/fitvids/jquery.fitvids.js' ,
         'bower_components/underscore/underscore.js',
         'js/main.js' ],
         dest: 'build/js/base.js',
