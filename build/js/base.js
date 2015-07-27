@@ -1442,31 +1442,34 @@
   }
 }.call(this));
 ;/* =======================================
- * Init js
- * =======================================
- */
+* Init js
+* =======================================
+*/
 ;
 console.log('Hello visitor & wellcome to afterwork space.');
 
+//find in html el class name -touch-
+classTouch = $( "html" ).hasClass( "touch" );
+console.log("html - has class touch (mobile device): " + classTouch);
 
 /* =======================================
- *  Resize Video Background
- * =======================================
- */
+*  Resize Video Background
+* =======================================
+*/
 var resizeVideoBackground = function() {
 
   $('.video-background').each(function(i, el) {
     var $el = $(el),
-      $section = $el.parent(),
-      min_w = 250,
-      video_w = 16,
-      video_h = 9,
-      section_w = $section.outerWidth(),
-      section_h = $section.outerHeight(),
-      scale_w = section_w / video_w,
-      scale_h = section_h / video_h,
-      scale = scale_w > scale_h ? scale_w : scale_h,
-      new_video_w, new_video_h, offet_top, offet_left;
+    $section = $el.parent(),
+    min_w = 250,
+    video_w = 16,
+    video_h = 9,
+    section_w = $section.outerWidth(),
+    section_h = $section.outerHeight(),
+    scale_w = section_w / video_w,
+    scale_h = section_h / video_h,
+    scale = scale_w > scale_h ? scale_w : scale_h,
+    new_video_w, new_video_h, offet_top, offet_left;
 
 
     if (scale * video_w < min_w) {
@@ -1487,71 +1490,76 @@ var resizeVideoBackground = function() {
 };
 
 /* =======================================
- * Resize Video Background
- * =======================================
- */
+* Resize Video Background
+* =======================================
+*/
 $(window).on('resize', function() {
   resizeVideoBackground();
 });
 
 /* =======================================
- * noscroll
- * =======================================
- */
+* noscroll
+* =======================================
+*/
 function noscroll() {
   window.scrollTo( 0, 0 );
 }
 
 /* =======================================
- * On win load
- * =======================================
- */
+* On win load
+* =======================================
+*/
 $(window).load(function() {
 
   console.log('window loaded..');
 
-  //find in html el class name -touch-
-  var classTouch = $( "html" ).hasClass( "touch" );
-  console.log("html - has class touch (mobile device): " + classTouch);
-
   if(classTouch){ //this is mobile device
+    // remove vide el.
+    $('.video-background-container').find('video').remove();
+    // set img insted video
+    $('.video-background-container').css("background-image", "url('img/ui/cover-photo-light.jpg')" );
+    $('.video-background-container').css("background-size", "cover" );
+    //
     $( ".ui-container" ).css( "top", "0px" );
     $( ".hp__intro" ).css( "position", "relative" );
   }
 
   //$( '#preloader' ).fadeOut( 1000, function() {
-    $( 'body' ).addClass( 'preloader-done' );
-    $( '.hp__intro' ).css( "display", "block" );
-    resizeVideoBackground();
-    //remove AW
-    $( '#preloader' ).addClass( 'start-opacity' );
+  $( 'body' ).addClass( 'preloader-done' );
+  $( '.hp__intro' ).css( "display", "block" );
+  resizeVideoBackground();
+  //remove AW
+  $( '#preloader' ).addClass( 'start-opacity' );
   //});
 
 });
 
 /* =======================================
- * onScroll
- * =======================================
- */
-$(window).on('scroll', function() {
-  //  Header menu show/hide
-  if ($(window).scrollTop() > 55) {
-    $('.l-header').addClass('hide');
-  } else {
-    $('.l-header').removeClass('hide');
-  }
-});
+* onScroll
+* =======================================
+*/
+$('.l-header').addClass('hide');
+if (!classTouch){
+  $(window).on('scroll', function() {
+      //  Header menu show/hide
+      if ($(window).scrollTop() > 55) {
+
+      } else {
+        $('.l-header').removeClass('hide');
+      }
+  });
+}
 
 /* =======================================
- * WOW - anima
- * =======================================
- */
+* WOW - anima
+* =======================================
+*/
 wow = new WOW({
   animateClass: 'animated',
   offset: 50,
   mobile: false,
   callback: function(box) {
-  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
   }
 });
 wow.init();
