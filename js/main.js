@@ -67,6 +67,15 @@ $(window).load(function() {
 
   console.log('window loaded..');
 
+  //find in html el class name -touch-
+  var classTouch = $( "html" ).hasClass( "touch" );
+  console.log("html - has class touch (mobile device): " + classTouch);
+
+  if(classTouch){ //this is mobile device
+    $( ".ui-container" ).css( "top", "0px" );
+    $( ".hp__intro" ).css( "position", "relative" );
+  }
+
   //$( '#preloader' ).fadeOut( 1000, function() {
     $( 'body' ).addClass( 'preloader-done' );
     $( '.hp__intro' ).css( "display", "block" );
@@ -76,31 +85,6 @@ $(window).load(function() {
   //});
 
 });
-
-//css anima
-// var animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' };
-// var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
-// var anim = document.getElementById("preloader");
-// // anim.addEventListener("animationstart", AnimationListener, false);
-// anim.addEventListener( animEndEventName, onEndInitialAnimation );
-//
-// var pfx = ["webkit", "moz", "MS", "o", ""];
-// function PrefixedEvent(element, type, callback) {
-// 	for (var p = 0; p < pfx.length; p++) {
-// 		if (!pfx[p]) type = type.toLowerCase();
-// 		element.addEventListener(pfx[p]+type, callback, false);
-// 	}
-// }
-//
-// // animation listener events
-// PrefixedEvent(anim, "AnimationStart", AnimationListener);
-// PrefixedEvent(anim, "AnimationIteration", AnimationListener);
-// PrefixedEvent(anim, "AnimationEnd", AnimationListener);
-//
-// // logic
-// if (e.animationName == "animInitialHeader" && e.type.toLowerCase().indexOf("animationend") >= 0) {
-//   console.log('---- animInitialHeader end.');
-// }
 
 /* =======================================
  * onScroll
@@ -115,15 +99,6 @@ $(window).on('scroll', function() {
   }
 });
 
-/* =======================================
- * Preload seq.
- * =======================================
- */
-// $(document).on('ready', function() {
-//     $('#preloader .preloader-logo > img').on('load', function() {
-//     $(this).show().addClass('bounceIn').next().show();
-//   });
-// });
 /* =======================================
  * WOW - anima
  * =======================================
