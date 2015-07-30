@@ -1538,16 +1538,19 @@ $(window).load(function() {
 * onScroll
 * =======================================
 */
-$('.l-header').addClass('hide');
+// $('.l-header').addClass('hide');
+
 if (!classTouch){
   $(window).on('scroll', function() {
       //  Header menu show/hide
       if ($(window).scrollTop() > 55) {
-
+        $('.l-header').addClass('hide');
       } else {
         $('.l-header').removeClass('hide');
       }
   });
+}else{
+  $('.l-header').addClass('hide');
 }
 
 /* =======================================
