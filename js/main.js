@@ -6,8 +6,8 @@
 console.log('Hello visitor & wellcome to afterwork space.');
 
 //find in html el class name -touch-
-classTouch = $("html").hasClass("touch");
-console.log("html - has class touch (mobile device): " + classTouch);
+var classTouch = $("html").hasClass("touch");
+// console.log("html - has class touch (mobile device): " + classTouch);
 
 /* =======================================
  *  Resize Video Background
@@ -27,7 +27,6 @@ var resizeVideoBackground = function() {
       scale_h = section_h / video_h,
       scale = scale_w > scale_h ? scale_w : scale_h,
       new_video_w, new_video_h, offet_top, offet_left;
-
 
     if (scale * video_w < min_w) {
       scale = min_w / video_w;
