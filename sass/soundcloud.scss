@@ -1,18 +1,29 @@
 .u-soundcloud-pg {
   text-align: center;
-  .slide-header {
+
+  .header {
     h1 {
       color: #4a4a4a;
       font-family: $font-roboto;
-      font-size: 90px;
+      font-size: rem(90);
       font-weight: 700;
       line-height: 1em;
       .orange {
         color: $orange;
       }
+
+      @include media($mobile) {
+        font-size: rem(36);
+      }
+
     }
+  }
+
+  .slide-header {
+    padding-top: em(120);
+
     h2 {
-      color: #4a4a4a;
+      color: #7B7B7B;
       font-family: $font-roboto;
       font-size: 40px;
       font-weight: 700;
