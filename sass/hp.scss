@@ -6,6 +6,19 @@
     top: 500px;
   }
 }
+
+.ui--up {
+  transition: top 1.5s;
+  transition-timing-function: cubic-bezier(0.35, 1.18, 1, 1);
+  // top define from js
+}
+
+.ui--down {
+  transition: top 1.2s;
+  transition-timing-function: cubic-bezier(0.35, 1.18, 0.7, 0.97);
+  // top define from js
+}
+
 .hp__intro {
   display: none; // while preload hide
   width: 100%;

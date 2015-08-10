@@ -87,6 +87,8 @@ div.element-1-3:last-child{margin-right:0;}
 .l__footer--container .copyrigth-txt{font-family:Roboto;font-weight:300;font-size:0.875rem;letter-spacing:0.125rem;}
 .l__footer--container .copyrigth-divider{margin:0 5px 0 15px;border-left:1px solid #dad8d8;height:16px;}
 .ui-container{top:900px;position:relative;z-index:20;}
+.ui--up{transition:top 1.5s;transition-timing-function:cubic-bezier(0.35,1.18,1,1);}
+.ui--down{transition:top 1.2s;transition-timing-function:cubic-bezier(0.35,1.18,0.7,0.97);}
 .hp__intro{display:none;width:100%;height:900px;position:fixed;z-index:1;}
 .hp__intro .bckg{height:100%;}
 .hp__intro .hp__intro--video{height:auto;}
