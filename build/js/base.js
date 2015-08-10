@@ -1547,6 +1547,7 @@
       //  Header menu show/hide
       if ($(window).scrollTop() > 55) {
         $('.l-header').addClass('hide');
+        $('.ui-container').removeClass('ui--down');
         // set 1st time only
 
         var bodyTop = $('body').scrollTop();
