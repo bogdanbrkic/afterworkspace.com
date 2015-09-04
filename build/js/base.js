@@ -1445,8 +1445,11 @@
    * Init js
    * =======================================
    */
-  ;
-  console.log('Hello visitor & wellcome to afterwork space.');
+   ;
+   console.log('--');
+   console.log('Hello visitor & wellcome to afterwork space.');
+   console.log('contact us @ contact@afterworkspace.com');
+   console.log('--');
 
   //find in html el class name -touch-
   var classTouch = $("html").hasClass("touch");
@@ -1456,20 +1459,20 @@
    *  Resize Video Background
    * =======================================
    */
-  var resizeVideoBackground = function() {
+   var resizeVideoBackground = function() {
 
     $('.video-background').each(function(i, el) {
       var $el = $(el),
-        $section = $el.parent(),
-        min_w = 250,
-        video_w = 16,
-        video_h = 9,
-        section_w = $section.outerWidth(),
-        section_h = $section.outerHeight(),
-        scale_w = section_w / video_w,
-        scale_h = section_h / video_h,
-        scale = scale_w > scale_h ? scale_w : scale_h,
-        new_video_w, new_video_h, offet_top, offet_left;
+      $section = $el.parent(),
+      min_w = 250,
+      video_w = 16,
+      video_h = 9,
+      section_w = $section.outerWidth(),
+      section_h = $section.outerHeight(),
+      scale_w = section_w / video_w,
+      scale_h = section_h / video_h,
+      scale = scale_w > scale_h ? scale_w : scale_h,
+      new_video_w, new_video_h, offet_top, offet_left;
 
       if (scale * video_w < min_w) {
         scale = min_w / video_w;
@@ -1492,7 +1495,7 @@
    * Resize Video Background
    * =======================================
    */
-  $(window).on('resize', function() {
+   $(window).on('resize', function() {
     resizeVideoBackground();
   });
 
@@ -1500,17 +1503,18 @@
    * noscroll
    * =======================================
    */
-  function noscroll() {
-    window.scrollTo(0, 0);
-  }
+  //  function noscroll() {
+  //   window.scrollTo(0, 0);
+  // }
 
   /* =======================================
    * On win load
    * =======================================
    */
-  $(window).load(function() {
+   $(window).load(function() {
 
     console.log('window loaded..');
+
 
     if (classTouch) { //this is mobile device
       // remove vide el.
@@ -1521,17 +1525,19 @@
       //
       $(".ui-container").css("top", "0px");
       $(".hp__intro").css("position", "relative");
-    }
 
+    }else{
     //$( '#preloader' ).fadeOut( 1000, function() {
-    $('body').addClass('preloader-done');
-    $('.hp__intro').css("display", "block");
-    resizeVideoBackground();
+      $('body').addClass('preloader-done');
+      $('.hp__intro').css("display", "block");
     //remove AW
     $('#preloader').addClass('start-opacity');
+    resizeVideoBackground();
+  }
+
     //});
 
-  });
+ });
 
   /* =======================================
    * onScroll
@@ -1556,8 +1562,8 @@
         if(countT==0){
           $('.ui-container').addClass('ui--up');
           $('.ui-container').css('top', bodyTop);
-      }
-      countT = 1;
+        }
+        countT = 1;
 
       } else {
         countT = 0; //reset
@@ -1582,14 +1588,14 @@
    * WOW - anima
    * =======================================
    */
-  wow = new WOW({
+   wow = new WOW({
     animateClass: 'animated',
     offset: 50,
     mobile: false,
     callback: function(box) {
-      console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      // console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
     }
   });
-  wow.init();
+   wow.init();
 
 //# sourceMappingURL=base.js.map
