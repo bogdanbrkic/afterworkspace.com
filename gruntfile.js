@@ -19,11 +19,11 @@ module.exports = function(grunt) {
         // Based on default settings on http://modernizr.com/download/
         "extra": {
           "touch": true,
-          "shiv": true,
-          "printshiv": true,
+          // "shiv": true,
+          // "printshiv": true,
           "load": true,
-          "mq": true,
-          "cssclasses": true
+          // "mq": true,
+          // "cssclasses": true
         },
 
         // Based on default settings on http://modernizr.com/download/
@@ -32,24 +32,24 @@ module.exports = function(grunt) {
         */
 
         "extensibility": {
-          "addtest": true,
-          "prefixed": true,
-          "teststyles": true,
-          "testprops": true,
-          "testallprops": true,
-          "hasevents": true,
-          "prefixes": true,
-          "domprefixes": true,
-          "fontface": true,
-          "history": true,
-          "notification": true,
-          "cssanimations": true,
-          "fullscreen_api": true,
-          "css_mediaqueries": true,
-          "postmessage": true,
-          "applicationcache": true,
-          "webworkers": true,
-          "canvas": true
+          // "addtest": true,
+          // "prefixed": true,
+          // "teststyles": true,
+          // "testprops": true,
+          // "testallprops": true,
+          // "hasevents": true,
+          // "prefixes": true,
+          // "domprefixes": true,
+          // "fontface": true,
+          // "history": true,
+          // "notification": true,
+          // "cssanimations": true,
+          // "fullscreen_api": true,
+          // "css_mediaqueries": true,
+          // "postmessage": true,
+          // "applicationcache": true,
+          // "webworkers": true,
+          // "canvas": true
         },
 
 

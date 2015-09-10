@@ -1,22 +1,24 @@
+;
 /* =======================================
  * Init js
  * =======================================
  */
-
 console.log('--');
 console.log('Hello visitor & wellcome to afterwork space.');
 console.log('contact us @ contact@afterworkspace.com');
 console.log('--');
+
+var classTouch;
 
 /* =======================================
  * DOM ready
  * =======================================
  */
 $( document ).ready(function(){
- console.info( "DOM ready..." );
+ // console.info( "DOM ready..." );
 
 //find in html el class name -touch-
-var classTouch = $("html").hasClass("touch");
+classTouch = $("html").hasClass("touch");
 // console.log("html - has class touch (mobile device): " + classTouch);
 });
 
@@ -25,7 +27,7 @@ var classTouch = $("html").hasClass("touch");
  * =======================================
  */
 $(window).load(function() {
-  console.log('window loaded..');
+  // console.info('window loaded..');
 
    $('body').addClass('preloader-done');
     $('.hp__intro').css("display", "block");
@@ -34,10 +36,10 @@ $(window).load(function() {
 
   if (classTouch) { //this is mobile device
     // remove vide el.
-    // $('.video-background-container').find('video').remove();
+    $('.video-background-container').find('video').remove();
     // set img insted video
-    // $('.video-background-container').css("background-image", "url('img/ui/cover-photo-light.jpg')");
-    // $('.video-background-container').css("background-size", "cover");
+    $('.video-background-container').css("background-image", "url('img/ui/cover-photo-light.jpg')");
+    $('.video-background-container').css("background-size", "cover");
     // $(".ui-container").css("top", "0px");
     // $(".hp__intro").css("position", "relative");
     // $('.hp__intro').css("display", "block");
@@ -58,13 +60,12 @@ $(window).load(function() {
  */
 // $('.l-header').addClass('hide');
 
-
+  var countT = 0;
 
   $(window).on('scroll', function() {
 
     if (!classTouch) {
 
-      var countT = 0;
     //  Header menu show/hide
     if ($(window).scrollTop() > 55) {
       $('.l-header').addClass('hide');
@@ -102,7 +103,7 @@ wow = new WOW({
   offset: 50,
   mobile: false,
   callback: function(box) {
-    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+    // console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
   }
 });
 wow.init();
