@@ -40,9 +40,9 @@ $(window).load(function() {
     // set img insted video
     $('.video-background-container').css("background-image", "url('img/ui/cover-photo-light.jpg')");
     $('.video-background-container').css("background-size", "cover");
-    // $(".ui-container").css("top", "0px");
-    // $(".hp__intro").css("position", "relative");
-    // $('.hp__intro').css("display", "block");
+    $(".ui-container").css("top", "0px");
+    $(".hp__intro").css("position", "relative");
+    $('.hp__intro').css("display", "block");
     // $('#preloader').addClass('start-opacity');
   } else {
     // $( '#preloader' ).fadeOut( 1000, function() {
