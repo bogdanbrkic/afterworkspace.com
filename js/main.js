@@ -54,11 +54,15 @@ $(window).load(function() {
 
 });
 
+
+  $(window).load(function(){
+    $(".content").mCustomScrollbar();
+  });
 /* =======================================
  * onScroll
  * =======================================
  */
-// $('.l-header').addClass('hide');
+$('.l-header').addClass('hide');
 
   var countT = 0;
 

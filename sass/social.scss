@@ -1,12 +1,10 @@
 $social-speed: 0.4s;
-
 .social-wrapper {
   font-family: $font-roboto;
   color: #9b9b9b;
   display: inline-block;
   vertical-align: middle;
   margin-right: 12px;
-
   .social {
     background: url("../../img/ui/social/social.png") no-repeat top left;
     width: 34px;
@@ -17,7 +15,7 @@ $social-speed: 0.4s;
   .fb {
     background-position: 0 -44px;
     @include transition (background $social-speed $ease-in-out-quad);
-    &:hover{
+    &:hover {
       background-position: 0 0;
       @include transition (background $social-speed $ease-in-out-quad);
     }
@@ -25,7 +23,7 @@ $social-speed: 0.4s;
   .gplus {
     background-position: 0 -132px;
     @include transition (background $social-speed $ease-in-out-quad);
-    &:hover{
+    &:hover {
       background-position: 0 -88px;
       @include transition (background $social-speed $ease-in-out-quad);
     }
@@ -33,10 +31,52 @@ $social-speed: 0.4s;
   .tw {
     background-position: 0 -220px;
     @include transition (background $social-speed $ease-in-out-quad);
-    &:hover{
+    &:hover {
       background-position: 0 -176px;
       @include transition (background $social-speed $ease-in-out-quad);
     }
   }
+}
 
+/*
+* social footer sprite
+*/
+.l__footer {
+  .social-wrapper {
+    display: inline-block;
+    background: url("../../img/ui/footer/footer-sprite.png") no-repeat top left;
+    // width: 22px;
+    // height: 13px;
+    // float: left;
+  }
+  .fb-ico {
+    background-position: 0 0;
+    width: 14px;
+    height: 24px;
+  }
+  .twitt-ico {
+    background-position: -24px 0;
+    height: 18px;
+  }
+  .gplus-ico {
+    background-position: -56px 0;
+    height: 24px;
+  }
+  .insta-ico {
+    background-position: -88px 0;
+    height: 22px;
+  }
+  .arrow-right {
+    background-position: -120px 0;
+    width: 12px;
+  }
+  .left-arrow {
+    background-position: -142px 0;
+    width: 12px;
+  }
+  .awlogo {
+    background-position: -164px 0;
+    width: 32px;
+    height: 16px;
+  }
 }
