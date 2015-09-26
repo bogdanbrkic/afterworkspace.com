@@ -58,7 +58,7 @@ $(window).load(function() {
  * onScroll
  * =======================================
  */
-// $('.l-header').addClass('hide');
+$('.l-header').addClass('hide');
 
   // var countT = 0;
 

@@ -59,7 +59,7 @@ div.item-100p {
   @include span-columns(6);
 }
 div.element-1-2,
-.l-col-1-2 {
+div.l-col-1-2 {
   @include span-columns(3);
   @include media($mobile) {
     @include span-columns(6);
@@ -73,10 +73,9 @@ div.element-1-3 {
 }
 /* footer */
 .l__footer {
-  // margin-top: em(80);
-  // padding-top: em(23);
+  margin-top: em(120);
   color: #999;
-  height: em(80);
+  height: em(130);
   background-color: #fff;
   border-top: 1px solid #eee;
 }
@@ -85,23 +84,37 @@ div.element-1-3 {
   text-align: center;
   @include vertical-align;
 
-  // line-height: 1em;
-  .copyrigth-txt {
-    font-family: $font-roboto;
-    font-weight: 300;
-    font-size: rem(14);
+  .l__footer--left {
+    @include span-columns(3);
+    line-height: em(57);
+
+    @include media($mobile) {
+        @include span-columns(6);
+    }
+  }
+
+  .l__footer--right {
+    @include span-columns(3);
+    line-height: initial;
+    text-align: left;
+
+    @include media($mobile) {
+        @include span-columns(6);
+    }
+  }
+
+  .l__footer--title{
+    display: table;
+    font-size: rem(16);
     letter-spacing: rem(2);
+    color: #4a4a4a;
   }
-  .copyrigth-divider {
-    margin: 0 16px 0 10px;
-    border-left: 1px solid #dad8d8;
-    height: 16px;
-  }
+
   .mail-contact-us {
-    color: #999;
-    font-family: $font-roboto;
+    color: #9b9b9b;
+    // font-family: $font-roboto;
     font-weight: 300;
-    font-size: rem(14);
-    letter-spacing: rem(2);
+    font-size: rem(16);
+    // letter-spacing: rem(2);
   }
 }
