@@ -58,22 +58,26 @@ $(window).load(function() {
  * onScroll
  * =======================================
  */
-$('.l-header').addClass('hide');
+// $('.l-header').addClass('hide');
 
   // var countT = 0;
 
-  // $(window).on('scroll', function() {
+   $(window).on('scroll', function() {
   //
   //   if (!classTouch) {
   //
   //   //  Header menu show/hide
-  //   if ($(window).scrollTop() > 55) {
+    if ($(window).scrollTop() >=900) {
   //     $('.l-header').addClass('hide');
   //     // $('.ui-container').removeClass('ui--down');
   //     // set 1st time only
   //
-  //     // var bodyTop = $('body').scrollTop();
-  //     // console.log(bodyTop);
+      $('.l-header').addClass('header-transparent--after-hero');
+  }else {
+    $('.l-header').removeClass('header-transparent--after-hero');
+  }
+
+
   //
   //     // if (countT == 0) {
   //     //   $('.ui-container').addClass('ui--up');
@@ -87,12 +91,11 @@ $('.l-header').addClass('hide');
   //     // $('.ui-container').removeClass('ui--up');
   //     // $('.ui-container').addClass('ui--down');
   //     // $('.ui-container').css('top', 900);
-  //   }
   //
-  // } else {
+// } //else {
   //   $('.l-header').addClass('hide');
   // }
-  // });
+  });
 
 if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
 window.onmousewheel = document.onmousewheel = wheel;
@@ -109,7 +112,7 @@ function wheel(event) {
 
 function handle(delta) {
   var time = 1000;
-  var distance = 180;
+  var distance = 220;
 
   $('html, body').stop().animate({
     scrollTop: $(window).scrollTop() - (distance * delta)

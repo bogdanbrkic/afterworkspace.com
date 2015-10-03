@@ -4,14 +4,13 @@
   position: relative;
   @include outer-container;
 
-
   .menu-item {
     float: left;
     margin-right: 1.125em;
     text-transform: uppercase;
 
     a {
-      color: #bebebe;
+      color: #333;  //bebebe
       font-family: $menu-font-family;
       font-size: em(16);
       font-weight: 300;
