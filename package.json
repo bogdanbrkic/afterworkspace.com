@@ -1,22 +1,21 @@
 {
-    "name" : "Grunt001",
-    "version" : "0.1.1",
-    "author" : "Bogdan",
-    "private" : true,
-
-    "devDependencies" : {
-        "grunt" :                       "~0.4.0",
-        "grunt-contrib-cssmin":         "*",
-        "grunt-contrib-concat":         "*",
-        "grunt-contrib-sass":           "*",
-        "grunt-contrib-uglify":         "*",
-        "grunt-contrib-watch":          "*",
-        "grunt-cssc":                   "*",
-        "grunt-htmlhint":               "*",
-        "grunt-modernizr":              "*",
-        "grunt-cache-bust":             "*",
-        "grunt-imageoptim":             "*",
-        "grunt-pagespeed":              "*",
-        "matchdep":                     "*"
-    }
+  "name": "Grunt001",
+  "version": "0.1.1",
+  "author": "Bogdan",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-cache-bust": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-htmlhint": "*",
+    "grunt-imageoptim": "*",
+    "grunt-modernizr": "^1.0.1",
+    "grunt-pagespeed": "*",
+    "matchdep": "*"
+  }
 }

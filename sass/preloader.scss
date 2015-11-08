@@ -1,0 +1,32 @@
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  display: block;
+  z-index: 20001;
+}
+.loader .progress-bar {
+  height: 1px;
+  background: silver;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  // left: 50%;
+  // margin-left: -100px;
+}
+.loader .progress-bar .progress {
+  transition: width .18s ease;
+  -webkit-transition: width .18s ease;
+  -moz-transition: width .18s ease;
+  -o-transition: width .18s ease;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: #FF4646;
+}
